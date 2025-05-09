@@ -1,79 +1,26 @@
 # 4th-meet
+Contract Name= coin.sol
+
+Contract Address - 0x14612302a8D0E752eE8555a062A446fc80ae821a
 
 
-Contract Address - 0xd69E29bE3cdAf327F107cb1496377d2356D21B58
-
-
-ABI
 [
     {
-      "anonymous": false,
       "inputs": [
         {
-          "indexed": true,
           "internalType": "address",
-          "name": "account",
+          "name": "user",
           "type": "address"
         },
         {
-          "indexed": false,
           "internalType": "uint256",
           "name": "amount",
           "type": "uint256"
         }
       ],
-      "name": "Deposit",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "Transfer",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "account",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "Withdraw",
-      "type": "event"
-    },
-    {
-      "inputs": [],
-      "name": "deposit",
+      "name": "decreaseBalance",
       "outputs": [],
-      "stateMutability": "payable",
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -84,7 +31,7 @@ ABI
           "type": "address"
         }
       ],
-      "name": "getBalanceOf",
+      "name": "getBalance",
       "outputs": [
         {
           "internalType": "uint256",
@@ -99,7 +46,7 @@ ABI
       "inputs": [
         {
           "internalType": "address",
-          "name": "to",
+          "name": "user",
           "type": "address"
         },
         {
@@ -108,7 +55,7 @@ ABI
           "type": "uint256"
         }
       ],
-      "name": "transfer",
+      "name": "increaseBalance",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -116,16 +63,20 @@ ABI
     {
       "inputs": [
         {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
           "internalType": "uint256",
           "name": "amount",
           "type": "uint256"
         }
       ],
-      "name": "withdraw",
+      "name": "setBalance",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
     }
   ]
-
 
